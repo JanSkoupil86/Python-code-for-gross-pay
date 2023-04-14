@@ -1,0 +1,11 @@
+hours = float(input("Enter hours worked: "))
+rate = float(input("Enter hourly rate: "))
+
+if hours <= 40:
+    gross_pay = hours * rate
+else:
+    regular_pay = 40 * rate
+    overtime_pay = (hours - 40) * rate * 1.5
+    gross_pay = regular_pay + overtime_pay
+
+print("Gross pay: $" + str(round(gross_pay, 2)))
