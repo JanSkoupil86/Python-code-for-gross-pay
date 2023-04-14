@@ -1,11 +1,22 @@
+#This code prompts the user to input the number of hours worked and the hourly rate, converts them to floating-point numbers,
+and then calculates the gross pay based on the number of hours worked and the rate.
+
 hours = float(input("Enter hours worked: "))
 rate = float(input("Enter hourly rate: "))
 
-if hours <= 40:
+#the program calculates the regular pay for the first 40 hours (40 * rate)
+
     gross_pay = hours * rate
+    
+#the overtime pay for the remaining hours ((hours - 40) * rate * 1.5), and then adds them together to get the total gross pay. 
+the regular hourly rate (r2 * h).  
+
 else:
     regular_pay = 40 * rate
     overtime_pay = (hours - 40) * rate * 1.5
     gross_pay = regular_pay + overtime_pay
+    
+#The round() function is used to round the result to two decimal places and the str() function is used to convert 
+the result to a string so that it can be concatenated with the "Gross pay: $" string in the print() statement.
 
 print("Gross pay: $" + str(round(gross_pay, 2)))
